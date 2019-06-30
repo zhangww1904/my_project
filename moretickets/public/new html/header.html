@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #header{
+            width:1160px;height:80px;margin:20px auto 40px;box-sizing:border-box;color:#323038;
+        }
+        /*导航中图片样式*/
+        .img_width{width:16%;vertical-align:middle;}
+        /*下拉菜单*/
+        .dropdown{display:inline-block;position:relative;}
+        .dropdown:hover .city{display:block;}
+        .checkcity{
+            display:inline-block;padding:0 20px;font-weight:500;font-size:20px;cursor:pointer;position:relative;height:80px;
+        }
+        .checkcity::after{
+            display:inline-block;content:"";border:5px solid transparent; border-top:5px solid #323038;position:absolute;right:3px;top:7px;
+        }
+        /* 菜单具体样式 */
+        a{text-decoration:none;color:#323038;font-size:16px;font-weight:500;}
+        .city{
+            width:600px;padding:40px 20px;border:1px solid #ddd;border-radius:5px;position:absolute;top:60px;left:-106px;
+            display:none;background-color:#fff;
+        }
+        .hot_city_style{margin-top:20px;margin-bottom:20px;}
+        .hot_city{display:inline-block; width:80px;}
+        .hot_city_check>a{display:inline-block;margin-bottom:10px;}
+        .letter_find{margin-top:20px;}
+        .letter_select{display:flex;flex-flow:row wrap;}
+        .bg_style{
+            width:25px;height:25px;text-align:center;line-height:25px;margin:5px 5px;background-color:#e2e6ea;padding:5px;
+        }
+        .letter_select_style{display:flex;margin-top:20px;}
+        .letter_title{display:inline-block;width:60px;}
+        /* 搜索框样式*/
+        ul{list-style:none;}
+        .select_border{
+            width:45%;height:100%;display:inline-block;position:relative;
+            margin-left:100px;
+        }
+        .select_border>input{
+            width:400px;height:34px;border:1px solid #ff4381;outline:none;
+            border-top-left-radius:17px;border-bottom-left-radius:17px;padding-left:20px;
+        }
+        .select_border>button{
+            width:100px;height:38px;border-top-right-radius:17px;
+            border-bottom-right-radius:17px;color:#fff;
+            border:1px solid #ff4381;background-color:#ff4381;
+            padding:0;position:absolute;top:0px;outline:none;
+            cursor:pointer;
+        }
+        .keywords{position:absolute;top:25px;left:-20px;}
+        .keywords::after{content:"";display:block;clear:both;}
+        ul>li{float:left;margin-right:20px;}
+        ul>li>a{font-size:12px;color:#777;}
+        /* 登录注册样式 */
+        .login_reg{
+            float:right;width:20%;height:80px;line-height:80px;text-align:right;
+            position:relative;
+        }
+        .login_reg>a{font-size:12px;color:#777;}
+        .login_reg::after{content:"";display:block;clear:both;}
+        .login_reg>a:hover{color:#ff4381;}
+        .login_reg>a>img{position:absolute;top:40px;left:17px;display:none;}
+        .login_reg>a:first-child:hover img{display:block;}
+        /* 分类导航样式 */
+        .navbar{width:1160px;height:60px;margin:0 auto;}
+        .nav{float:left;width:100%;text-align:justify;margin:0;padding:0;}
+        .nav>li{width:11%;height:60px;;line-height:60px;margin-right:0;text-align:center;}
+        .nav>li>a{font-size:20px;color:#323038;}
+        .nav>li>a:visited{font-size:24px;border-bottom:1px solid #ff4381;}
+        .nav>li>a:hover{font-size:24px;border-bottom:1px solid #ff4381;}
+        .nav>li>a:active{font-size:24px;border-bottom:1px solid #ff4381;}
+    </style>
+</head>
+<body>
+    <!-- 头部导航 -->
+    <div id="header">
+        <!--导航图片-->
+        <img class="img_width" src="../images/header/logo-b17998409b.png">
+        <!-- 下拉菜单 -->
+        <div class="dropdown">
+            <span class="checkcity">北京</span>
+            <!-- 菜单具体样式 -->
+            <div class="city">
+                <div class="positioning_city">
+                    <span>定位城市：</span>
+                    <span style="display:inline-block; width:80px;height:25px;background-color:#fff4f8;color:#ff4381;text-align:center;">北京</span>
+                </div>
+                <div class="hot_city_style">
+                    <span class="hot_city">热门城市：</span>
+                    <span class="hot_city_check">
+                        <a href="#">北京</a>
+                        <a href="#">上海</a>
+                        <a href="#">广州</a>
+                        <a href="#">深圳</a>
+                        <a href="#">杭州</a>
+                        <a href="#">南京</a>
+                        <a href="#">成都</a>
+                        <a href="#">武汉</a>
+                        <a href="#">天津</a>
+                        <a href="#">西安</a>
+                        <a href="#">重庆</a>
+                        <a href="#">长沙</a>
+                    </span>
+                </div>
+                <hr>
+                <div class="letter_find">
+                    <p>按字母查找</p>
+                    <div class="letter_select">
+                        <a href="#" class="bg_style">A</a>
+                        <a href="#" class="bg_style">B</a>
+                        <a href="#" class="bg_style">C</a>
+                        <a href="#" class="bg_style">D</a>
+                        <a href="#" class="bg_style">E</a>
+                        <a href="#" class="bg_style">F</a>
+                        <a href="#" class="bg_style">G</a>
+                        <a href="#" class="bg_style">H</a>
+                        <a href="#" class="bg_style">J</a>
+                        <a href="#" class="bg_style">K</a>
+                        <a href="#" class="bg_style">L</a>
+                        <a href="#" class="bg_style">M</a>
+                        <a href="#" class="bg_style">N</a>
+                        <a href="#" class="bg_style">P</a>
+                        <a href="#" class="bg_style">Q</a>
+                        <a href="#" class="bg_style">R</a>
+                        <a href="#" class="bg_style">S</a>
+                        <a href="#" class="bg_style">T</a>
+                        <a href="#" class="bg_style">W</a>
+                        <a href="#" class="bg_style">X</a>
+                        <a href="#" class="bg_style">Y</a>
+                        <a href="#" class="bg_style">Z</a>
+                    </div>
+                </div>
+                <div class="letter_select_style">
+                    <span class="letter_title">A</span>
+                    <span class="hot_city_check">
+                        <a href="#">阿拉善</a>
+                        <a href="#">鞍山</a>
+                        <a href="#">安庆</a>
+                        <a href="#">安阳</a>
+                        <a href="#">阿坝</a>
+                        <a href="#">安顺</a>
+                        <a href="#">阿里</a>
+                        <a href="#">安康</a>
+                        <a href="#">阿克苏</a>
+                        <a href="#">阿勒泰</a>
+                        <a href="#">阿拉尔</a>
+                        <a href="#">澳门</a>
+                </span>
+                </div>
+                <div class="letter_select_style">
+                    <span class="letter_title" style="padding-right:20px;">B</span>
+                    <span class="hot_city_check">
+                        <a href="#">北京</a>
+                        <a href="#">保安</a>
+                        <a href="#">包头</a>
+                        <a href="#">巴彦淖尔</a>
+                        <a href="#">本溪</a>
+                        <a href="#">白山</a>
+                        <a href="#">白城</a>
+                        <a href="#">蚌埠</a>
+                        <a href="#">亳州</a>
+                        <a href="#">滨州</a>
+                        <a href="#">北海</a>
+                        <a href="#">百色</a>
+                        <a href="#">白沙</a>
+                        <a href="#">保亭</a>
+                        <a href="#">巴中</a>
+                        <a href="#">毕节</a>
+                        <a href="#">保山</a>
+                        <a href="#">宝鸡</a>
+                        <a href="#">白银</a>
+                        <a href="#">博尔塔拉</a>
+                        <a href="#">巴音郭楞</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- 搜索框 -->
+        <div class="select_border">
+            <input type="text" placeholder="搜索明星、演出。场馆">
+            <button>搜索</button>
+            <ul class="keywords">
+                <li><a href="#">仓木麻衣</a></li>
+                <li><a href="#">林宥嘉</a></li>
+                <li><a href="#">玫瑰人生</a></li>
+                <li><a href="#">音乐剧猫</a></li>
+                <li><a href="#">林俊杰</a></li>
+            </ul>
+        </div>
+        <!-- 登录注册 -->
+        <div class="login_reg">
+           <a href="#">手机端
+               <img src="../images/header/app-qrcode-cf166b7b2f.png">
+           </a>
+           <a href="#">登录</a>
+           <span>/</span>
+           <a href="#">注册</a>
+        </div>
+    </div>
+    <!-- 分类导航 -->
+    <div class="navbar">
+        <ul class="nav">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">演唱会</a></li>
+            <li><a href="#">话剧歌剧</a></li>
+            <li><a href="#">体育赛事</a></li>
+            <li><a href="#">音乐会</a></li>
+            <li><a href="#">儿童亲子</a></li>
+            <li><a href="#">舞蹈芭蕾</a></li>
+            <li><a href="#">展览休闲</a></li>
+            <li><a href="#">曲艺杂谈</a></li>
+        </ul>
+    </div>
+</body>
+</html>

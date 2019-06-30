@@ -1,0 +1,33 @@
+#floor1{
+    width:1160px;height:793px;margin:auto;
+}
+/* 近期热门 */
+.popular{width:742px;height:40px;}
+/* 近期热门标题样式 */
+.title{
+    height:100%;height:40px;line-height:40px;
+}
+.title>h3{
+    float:left;margin:0;font-weight:normal;
+}
+.title>a{
+    float:right;text-decoration:none;color:#ff4655;font-size:16px;
+}
+.title:after{
+    content:"";display:block;clear:both;
+}
+/* 近期热门内容样式 */
+a{
+    text-decoration:none;color:#333;font-size:12px;
+}
+.content{
+    width:100%;height:673px;
+    box-sizing:border-box;
+}
+.content:after{content:"";display:block;clear:both;}
+.block{
+    width:21.25%;padding:20px 0;text-align:justify;float:left;
+}
+.block:not(:first-child){margin-left:5%;}
+.img_width{width:100%;margin-bottom:5px;}
+.price_style>a>h2{display:inline-block;margin:0;color:#ff4655;}

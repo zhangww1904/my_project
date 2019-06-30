@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id="uname" type="text" placeholeder="请输入您的用户名"><br>
+    <input id="upwd" type="password" placeholder="请输入您的密码"><br>
+    <button onclick="getXHR()">登陆</button>
+    <div id="d1"></div>
+    <script>
+        function getXHR(){
+            var xhr=new XMLHttpRequest();
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4&&xhr.status==200){
+                    var result=res.responseText;
+                    di.innerHTML=result;
+                }
+
+            }
+            xhr.open('get',"/user/login?uname="+uname.value+"&upwd="+upwd.value,true);
+            xhr.send(null);
+        }
+    </script>
+</body>
+</html>
