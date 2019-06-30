@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .bu{
+            padding-left:50px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>新用户注册</td>
+            <td>
+                <a href="#">直接登录</a>
+            </td>
+        </tr>
+        <tr>
+            <td>用户名：</td>
+            <td>
+                <input type="text" id="uname" placeholder="请输入用户名" onblur="check_uname()">
+                <span id="cn"></span>
+            </td>
+                
+        </tr>
+        <tr>
+            <td>密码：</td>
+            <td>
+                <input type="password" id="upwd" placeholder="请输入密码" onblur="check_wnull()">
+                <span id="cw"></span>
+            </td>     
+        </tr>
+        <tr>
+            <td>确认密码：</td>
+            <td>
+                <input type="password" id="upwd2" placeholder="请确认密码" onblur="check_wnull2()">
+                <span id="cw2"></span>
+            </td>               
+        </tr>
+        <tr>
+            <td>邮箱：</td>
+            <td>
+                <input type="text" id="email" placeholder="请输入邮箱" onblur="check_email()">
+                <span id="ce"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>手机号：</td>
+            <td>
+                <input type="text" id="phone" placeholder="请输入手机号" onblur="check_phone()">
+                <span id="cp"></span>
+            </td>   
+        </tr>
+        <tr>
+            <td colspan="2" class="bu">
+                <button onclick="check_reg()">提交注册信息</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+        /*检查用户名是否可用*/
+        function check_uname(){
+            var $uname=uname.value;
+            if(!$uname){
+                cn.innerHTML="用户名不能为空";
+            }else{
+                cn.innerHTML='格式正确';
+            }
+            var xhr=new XMLHttpRequest();
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4 && xhr.status==200){
+                    var result=xhr.responseText;
+                    if(result==0){
+                        cn.innerHTML="用户名已被注册";
+                    }else{
+                        cn.innerHTML='用户名可用';
+                    }
+                }
+            }
+            xhr.open("get","/user/v1/check_uname/"+$uname,true);
+            xhr.send(null);
+        }
+        /*验证用户密码是否为空*/
+        function check_wnull(){
+            var $upwd=upwd.value;
+            if(!$upwd){
+                cw.innerHTML="密码不能为空";
+            }else{
+                cw.innerHTML="格式正确";
+            }
+        }
+        /*验证确认密码是否一致*/
+        function check_wnull2(){
+            var $upwd2=upwd2.value;
+            if(!$upwd2){
+                cw2.innerHTML="密码不能为空";
+            }else if($upwd2===upwd.value){
+                cw2.innerHTML="格式正确";
+            }else{
+                cw2.innerHTML="输入的密码不一致";
+            }
+        }
+        /*检查邮箱是否被注册*/
+        function check_email(){
+            var $email=email.value;
+            if(!$email){
+                ce.innerHTML="邮箱不能为空";
+            }
+            var xhr=new XMLHttpRequest();
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4 && xhr.status==200){
+                    //console.log(000000000);
+                    var result=xhr.responseText;
+                    if(result==0){
+                        //console.log('11111111');
+                        ce.innerHTML="该邮箱已被注册";
+                    }else if(result==1){
+                        ce.innerHTML="邮箱可用";
+                    }else{
+                        ce.innerHTML=result;
+                    }
+                }
+            }
+            //console.log("email");
+            xhr.open("get","/user/v1/check_email/"+$email,true);
+            xhr.send(null);
+        }
+        /*检查手机号是否被注册*/
+        function check_phone(){
+            var $phone=phone.value;
+            if(!$phone){
+                cp.innerHTML="手机号不能为空";
+                return;
+            }
+            var xhr=new XMLHttpRequest();
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4 && xhr.status==200){
+                    var result=xhr.responseText;
+                    if(result==0){
+                        cp.innerHTML="该手机号已被注册";
+                    }else{
+                        cp.innerHTML="手机号可用";
+                    }
+                }
+            }
+            xhr.open("get","/user/v1/check_phone/"+$phone,true);
+            xhr.send(null);
+        }
+        function check_reg(){
+            var $uname=uname.value;
+            var $upwd=upwd.value;
+            var $upwd2=upwd2.value;
+            var $email=email.value;
+            var $phone=phone.value;
+            if(!$uname){
+                cn.innerHTML="用户名不能为空";
+                return;
+            }
+            if(!$upwd){
+                cw.innerHTML="密码不能为空";
+                return;
+            }
+            if(!$upwd2){
+                cw2.innerHTML="密码不能为空";
+                return;
+            }
+            if(!$email){
+                ce.innerHTML="邮箱不能为空";
+                return;
+            }
+            if(!$phone){
+                cp.innerHTML="手机号不能为空";
+                return;
+            }
+            
+            var xhr=new XMLHttpRequest();
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4 && xhr.status==200){
+                    var result=xhr.responseText;
+                    if(result==1){
+                        alert("注册成功");
+                    }else{
+                        alert(result);
+                    }
+                }
+            }
+            xhr.open("post","/user/v1/reg",true);
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            var formdata="uname="+uname.value+"&upwd="+upwd2.value+"&email="+email.value+"&phone="+phone.value;
+            xhr.send(formdata);
+        }
+    </script>
+</body>
+</html>

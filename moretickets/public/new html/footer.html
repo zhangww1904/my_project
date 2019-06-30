@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*简单的css reset*/
+        ul,p,h4{padding:0;margin:0;}
+        /*footer共有样式*/
+        #footer{ width:1160px;margin:auto;}
+        /*图片相关样式*/
+        .d1{width:90%;margin:auto;}
+        .d2{width:65%;margin:auto;}
+        .d1>img,.d2>img{width:100%;}
+        /*底部样式*/
+        #bottom{list-style:none;display:flex;justify-content: space-between;margin:50px 30px 0 30px;}
+        a,p{text-decoration:none;color:#333;font-size:14px;margin-top:5px;}
+        ul>li{width:16%;display:flex;flex-flow:column;}
+        .left_li{margin-right:100px;}
+        .left_li>img{width:100%;}
+        /*联系客服样式*/
+        .service{
+            display:block;width:100px;height:30px;border:1px solid #f00;border-top-left-radius:15px;border-top-right-radius:15px;border-bottom-left-radius: 15px;border-bottom-right-radius: 15px;
+            color:#f00;text-align:center;line-height:30px;
+        }
+        /*版权样式*/
+        .copyright,.copyright2{text-align:center;font-size:12px;}
+        .copyright{margin-top:80px;}
+        .copyright2{margin-top:10px;}
+        .copy_img1{width:20px;height:20px;vertical-align: middle}
+        .copy_img2{width:15px;height:15px;vertical-align: middle}
+
+    </style>
+</head>
+<body>
+    <div id="footer">
+        <!--图片-->
+        <div class="d1">
+            <img src="../images/footer/assurance-bg-0007cd6678.png">
+        </div>
+        <div class="d2">
+            <img src="../images/footer/companions-3aa1317ab0.png">
+        </div>
+        <!--底部-->
+        <div>
+            <ul id="bottom">
+                <li class="left_li">
+                    <img src="../images/footer/logo-b17998409b.png">
+                </li>
+                <li>
+                    <h4>帮助中心</h4>
+                    <a href="#">预售演出</a>
+                    <a href="#">关于座位</a>
+                    <a href="#">配送方式</a>
+                    <a href="#">无票赔付</a>
+                    <a href="#">订单提示</a>                            
+                </li>
+                <li>
+                    <h4>关于我们</h4>
+                    <a href="#">联系我们</a>
+                    <a href="#">大事记</a>
+                    <a href="#">公司介绍</a>
+                    <a href="#">问题反馈</a>
+                    <a href="#">隐私协议</a>
+                </li>
+                <li>
+                    <h4>支付方式</h4>
+                    <a href="#"><img src="#"></a> 
+                    <a href="#"><img src="#"></a> 
+                </li>
+                <li>
+                    <h4>关注我们</h4>
+                    <a href="#"><img src="#"></a> 
+                </li>
+                <li class="last_li">
+                    <h4>10102266</h4>
+                    <p>周一至周日 9:00-21:00</p>
+                    <a href="#" class="service">联系客服</a>
+                </li>
+            </ul>
+        </div>
+        <!--版权-->
+        <div class="copyright">Copyright©2015-2018&nbsp;上海锐赏文化传播有限公司&nbsp;ALL&nbsp;Rights&nbsp;Reserved&nbsp;|&nbsp;沪ICP备17026590号-1</div>
+        <div class="copyright2">
+            <span><img class="copy_img1" src="../images/footer/gongshang.png">上海工商</span>
+            <span><img class="copy_img2" src="../images/footer/gonganwangbei-d0289dc0a4.png">沪公网安备&nbap;31010402004599号</span> 
+        </div>
+    </div>
+</body>
+</html>
