@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- saved from url=(0094)file:///Users/muwei/Documents/myproject/my_project/moretickets/public/new%20html/concerts.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="file:///Users/muwei/Documents/myproject/my_project/moretickets/public/new%20css/concerts.css">
+</head>
+<body>
+  <!-- 分类——演唱会 -->
+  <div id="concerts">
+    <div class="select">
+      <div class="select_first">
+        <div class="select_city">按城市:</div>
+        <ul class="select_option">
+          <li>
+            <a href="javascript:;" class="bg_style">包头</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="bg_style">呼和浩特</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="bg_style">巴彦淖尔</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="bg_style">赤峰</a>
+          </li>
+          <li>
+             <a href="javascript:;" class="bg_style">北京</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="bg_style">延边</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="bg_style">长春</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="bg_style">张家口</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="bg_style">丹东</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="bg_style">大连</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="bg_style">沈阳</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="bg_style">哈尔滨</a>
+          </li>
+        </ul>
+      </div>
+      <div class="select_two select_first">
+        <div class="select_city">按时间:</div>
+        <ul class="select_option">
+          <li>
+            <a href="javascript:;" class="">全部</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="">一周内</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="">一月内</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="e">本周末</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="">按日历</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script>
+    var lis=document.querySelectorAll("ul.select_option>li");
+    console.log(lis);
+    for(var li of lis){
+      li.onclick=function(){
+        var li=this;
+        console.log(li);
+        li.className="";
+        
+      }
+    }
+  </script>
+
+</body></html>

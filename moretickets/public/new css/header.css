@@ -1,0 +1,215 @@
+#header{
+  width:1160px;
+  height:80px;
+  margin:20px auto 40px;
+  box-sizing:border-box;
+
+}
+/*导航中图片样式*/
+#header>.img_width{
+  width:16%;
+  vertical-align:middle;
+}
+/*下拉菜单*/
+#header>.dropdown{
+  display:inline-block;
+  position:relative;
+}
+#header>.dropdown:hover .city{
+  display:block;
+}
+#header>.dropdown>.checkcity{
+  display:inline-block;
+  padding:0 20px;
+  font-weight:500;
+  font-size:20px;
+  cursor:pointer;
+  position:relative;
+  height:80px;
+}
+#header>.dropdown>.checkcity::after{
+  display:inline-block;
+  content:"";
+  border:5px solid transparent; 
+  border-top:5px solid #323038;
+  position:absolute;
+  right:3px;top:7px;
+}
+/* 菜单具体样式 */
+a{
+  text-decoration:none;
+  color:#323038;
+  font-size:16px;
+
+}
+#header>.dropdown>.city{
+  width:600px;
+  padding:40px 20px;
+  border:1px solid #ddd;
+  border-radius:5px;
+  position:absolute;
+  top:60px;left:-106px;
+  display:none;
+  background-color:#fff;
+}
+#header>.dropdown>.city>.hot_city_style{
+  margin-top:20px;
+  margin-bottom:20px;
+}
+.dropdown>.city>.hot_city_style>.hot_city{
+  display:inline-block; 
+  width:80px;
+}
+.dropdown>.city>.hot_city_style>.hot_city_check a,
+.dropdown>.city>.letter_find>.letter_select_style>.hot_city_check a{
+  display:inline-block;
+  margin-bottom:10px;
+}
+.dropdown>.city>.letter_find{
+  margin-top:20px;
+}
+.dropdown>.city>.letter_find>.letter_select{
+  display:flex;
+  flex-flow:row wrap;
+}
+.dropdown>.city>.letter_find>.letter_select>.bg_style{
+  width:25px;
+  height:25px;
+  text-align:center;
+  line-height:25px;
+  margin:5px 5px;
+  background-color:#e2e6ea;
+  padding:5px;
+}
+.dropdown>.city>.letter_find>.letter_select_style{
+  display:flex;
+  margin-top:20px;
+}
+.dropdown>.city>.letter_find>.letter_select_style>.letter_title{
+  display:inline-block;
+  width:60px;
+}
+/* 搜索框样式*/
+ul{
+  list-style:none;
+}
+#header>.select_border{
+  width:45%;
+  height:100%;
+  display:inline-block;
+  position:relative;
+  margin-left:100px;
+}
+#header>.select_border>input{
+  width:400px;
+  height:34px;
+  border:1px solid #ff4381;
+  outline:none;
+  border-top-left-radius:17px;
+  border-bottom-left-radius:17px;
+  padding-left:20px;
+}
+#header>.select_border>button{
+  width:100px;
+  height:38px;
+  border-top-right-radius:17px;
+  border-bottom-right-radius:17px;color:#fff;
+  border:1px solid #ff4381;
+  background-color:#ff4381;
+  padding:0;
+  position:absolute;
+  top:0px;
+  outline:none;
+  cursor:pointer;
+}
+#header>.select_border>.keywords{
+  position:absolute;
+  top:41px;
+  left:22px;
+}
+#header>.select_border>.keywords::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+#header>.select_border>ul.keywords>li{
+  float:left;
+  margin-right:20px;
+}
+#header>.select_border>ul.keywords>li>a{
+  font-size:12px;
+  color:#777;
+}
+/* 登录注册样式 */
+#header>.login_reg{
+  float:right;
+  width:20%;
+  height:80px;
+  line-height:80px;
+  text-align:right;
+  position:relative;
+}
+#header>.login_reg>a{
+  font-size:12px;
+  color:#777;
+}
+#header>.login_reg::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+#header>.login_reg>a:hover{
+  color:#ff4381;
+}
+#header>.login_reg>a>img{
+  position:absolute;
+  top:40px;
+  left:17px;
+  display:none;
+}
+#header>.login_reg>a:first-child:hover img{
+  display:block;
+}
+/* 分类导航样式 */
+.navbar{
+  width:1160px;
+  height:60px;
+  margin:0 auto;
+}
+.navbar>.nav{
+  float:left;
+  width:100%;
+  text-align:justify;
+  margin:0;
+  padding:0;
+}
+.navbar>.nav>li{
+  width:11%;
+  height:60px;
+  line-height:60px;
+  margin-right:0;
+  text-align:center;
+  float:left;
+}
+.navbar>.nav>li:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+.navbar>.nav>li>a{
+  font-size:20px;
+  color:#323038;
+}
+.navbar>.nav>li>a:visited{
+  font-size:24px;
+  border-bottom:1px solid #ff4381;
+}
+.navbar>.nav>li>a:hover{
+  font-size:24px;
+  border-bottom:1px solid #ff4381;
+  color:#ff4381;
+}
+.navbar>.nav>li>a:active{
+  font-size:24px;
+  border-bottom:1px solid #ff4381;
+}
