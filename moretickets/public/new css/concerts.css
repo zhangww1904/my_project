@@ -1,0 +1,248 @@
+/* css reset */
+ul{
+  padding:0;
+  margin:0;
+  list-style:none;
+}
+#concerts>a{
+  text-decoration:none;
+  color:#494949;
+  font-size:14px;
+}
+/* 整个内容页面 */
+#concerts{
+  width:1160px;
+  margin:auto;
+}
+/* 城市选择和时间选择 */
+#concerts>.select{
+  width:1158px;
+  height:208px;
+  border:1px solid #ededed;
+}
+#concerts>.select>.select_first{
+  width:1158px;
+  height:56px;
+  padding:31px 0;
+}
+#concerts>.select>.select_first>.select_city{
+  width:45.7px;
+  height:28px;
+  line-height:28px;
+  float:left;
+  padding:0 20px 0 30px;
+  font-size:14px;
+}
+#concerts>.select>.select_first>.select_option{
+  float:left;
+  width:926.4px;
+  height:56px;
+}
+#concerts>.select>.select_first>.select_option>li{
+  display:inline-block;
+  width:90px;
+  height:28px;
+  line-height:28px;
+}
+#concerts>.select>.select_first>.select_option>li>a{
+  display:inline-block;
+  width:90px;
+  height:28px;
+  line-height:28px;
+  text-align:center;
+}
+#concerts>.select>.select_two.select_first{
+  height:28px;
+}
+#concerts>.select>.select_two>.select_option{
+  height:28px;
+}
+#concerts>.select>.select_two>.select_option .bg_style,
+#concerts>.select>.select_first>.select_option .bg_style{
+  background:linear-gradient(to right,#ff4655,#ff4287);
+  border-radius:14px;
+  color:#fff !important;
+}
+/*近期热门|最近开场|折扣最优   */
+#concerts>.condition{
+  width:1158px;
+  height:60px;
+  border:1px solid #ededed;
+  margin:16px 0 60px;
+}
+#concerts>.condition>div{
+  float:left;
+  width:76px;
+  height:60px;
+  padding:0 20px 0 30px;
+  font-weight:bold;
+  line-height:60px;
+}
+#concerts>.condition>a:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+#concerts>.condition>div>.active{
+  color:#ff4655;
+}
+/* 本页具体展示的内容 */
+#concerts>.show_container{
+  width:1160px;
+}
+#concerts>.show_container>a{
+  width:555px;
+  height:326px;
+  display:inline-block;
+}
+#concerts>.show_container>a:nth-child(2n){
+  margin-left:42px;
+}
+#concerts>.show_container .show_inner{
+  width:525px;
+  height:238px;
+  border-radius:1px solid #f0f0f0;
+  margin-left:28px;
+  margin-top:30px;
+  margin-bottom:60px;
+  border-radius:4px;
+  box-shadow:0px 0px 12px 0px #f0f0f0;
+  position:relative;
+  box-sizing:border-box;
+}
+#concerts>.show_container .show_inner>.top{
+  width:100%;
+  display:inline-block;
+  position:relative;
+}
+#concerts .show_inner>.top>.top_img{
+  float:left;
+  height:198px;
+  position:relative;
+  top:-30px;
+  left:-28px;
+}
+#concerts .show_inner>.top>.top_img>img{
+  width:150px;
+  height:210px;
+  border-radius:4px;
+  position:absolute;
+  box-shadow:0 4px 16px 0 #ccc;
+}
+#concerts .show_inner>.top>.top_detail{
+  float:right;
+  width:360px;
+  right:20px;
+  top:15px;
+  bottom:7px;
+  position:absolute;
+}
+#concerts .show_inner>.top>.top_detail>.detail_name{
+  height:46px;
+  line-height:24px;
+  font-size:16px;
+  color:#331612;
+  text-align:left;
+  /* 多行溢出 */
+  overflow:hidden;
+  word-break:break-all;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+}
+#concerts .show_inner>.top>.top_detail>.detail_desc{
+  font-size:12px;
+  color:#aaa;
+  padding:5px 0;
+}
+#concerts .show_inner>.top>.top_detail>.detail_tags{
+  height:58px;
+  overflow:hidden;
+}
+#concerts .show_inner>.top>.top_detail>.detail_tags>span{
+  display:inline-block;
+  border:1px solid #ffbbc5;
+  border-radius:2px;
+  color:#ff1d41;
+  height:17px;
+  line-height:17px;
+  padding:0 3px;
+  text-align:center;
+  font-weight:400;
+}
+#concerts .show_inner>.top>.top_detail>.detail_tags>span:last-child{
+  border-color: #ccd2ff;
+  color:#576bff;
+}
+#concerts .show_inner>.top>.top_detail>.detail_date{
+  display:inline-block;
+  width:100%;
+  position:relative;
+}
+#concerts .show_inner>.top>.top_detail .detail_time{
+  font-size:12px;
+  color:#494949;
+  line-height:20px;
+}
+#concerts .show_inner>.top>.top_detail>.detail_date .date_addr{
+  float:left;
+  font-size:12px;
+  color:#494949;
+  line-height:20px;
+  height:20px;
+}
+#concerts .show_inner>.top>.top_detail>.detail_date .date_price{
+  float:right;
+  color:#ff4655;
+  position:absolute;
+  right:0px;
+  top:5px;
+}
+#concerts .show_inner>.top>.top_detail>.detail_date .date_price>span:first-child{
+  font-size:20px;
+  font-weight:700;
+  height:40px;
+  line-height:40px;
+}
+#concerts .show_inner>.bottom{
+  border-top:1px solid #efefef;
+  padding-top:12px;
+  height:26px;
+  margin:0 20px;
+}
+#concerts .show_inner>.bottom>div{
+  float:left;
+  width:108px;
+  height:13px;
+  font-size:12px;
+  line-height:13px;
+}
+#concerts .show_inner>.bottom>div:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+/* 分页 */
+#pagination{
+  width:1160px;
+  height:30px;
+  padding-bottom:60px;
+  margin:auto;
+  
+}
+#pagination>a{
+  display:inline-block;
+  width:51px;
+  height:30px;
+  line-height:30px;
+  text-align:center;
+  border-radius:15px;
+  background:#efefef;
+  float:right;
+  margin-left:10px;
+}
+#pagination>a.active{
+  background-image:linear-gradient(to right,#ff4655,#ff4287);
+  color:#fff;
+}
